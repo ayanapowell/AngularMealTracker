@@ -1,3 +1,23 @@
 body {
   font-family: monospace;
+  background-color: #f2f2f2;
+}
+
+a {
+  color: black;
+}
+
+.header {
+  background: url('../../resources/img/sandwich.jpeg') center center no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.header h2 {
+  padding: 40px 0 0 40px;
+}
+
+.header a:first-child {
+  margin-left: 40px;
+  color: black;
 }

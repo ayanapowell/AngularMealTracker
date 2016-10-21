@@ -1,40 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
 import { Meal } from './meal';
 import { MealDetailComponent } from './meal-detail.component';
-import { MealService } from './meal.service';
+import { MealsComponent } from './all-meals.component';
+
 
 @Component({
   selector: 'my-app',
   template: `
     <div class="container">
-      <h4>Your list of meals:</h4>
-      <nav>
+      <div class="header">
+        <h2>{{ title }}</h2>
+        <nav>
           <a routerLink="/dashboard">Dashboard</a> |
-          <a routerLink="/meals">All meals</a>
+          <a routerLink="/meals">All your meals</a>
         </nav>
-        <div class="well">
-          <ul class="meals">
-            <li *ngFor="let meal of meals">
-            <span class="id">{{ meal.id }}</span>{{ meal.name }}
-            <p>{{ meal.description }}</p>
-            <p>Calories: {{ meal.calories }}</p>
-          </ul>
-        </div>
+      </div>
+      <router-outlet></router-outlet>
     </div>
   `
 })
 
-export class AppComponent implements OnInit {
-  meals: Meal[];
-  selectedMeal: Meal;
-
-  constructor(private mealService: MealService) { }
-
-  getMeals(): void {
-    this.mealService.getMeals().then(meals => this.meals = meals);
-  }
-
-  ngOnInit(): void {
-    this.getMeals();
-  }
+export class AppComponent {
+  title = "Meal Tracker";
 }

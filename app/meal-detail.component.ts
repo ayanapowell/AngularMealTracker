@@ -4,6 +4,7 @@ import { Location }  from '@angular/common';
 
 import { Meal } from './meal';
 import { MealService } from './meal.service';
+import { MealsComponent } from './all-meals.component';
 
 
 @Component({
