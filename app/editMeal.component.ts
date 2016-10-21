@@ -3,7 +3,7 @@ import { Meal } from './meal.model';
 
 @Component ({
   selector: "edit-meal",
-  templateUrl: './templates.editMeal.component.html'
+  templateUrl: 'app/templates/editMeal.component.html'
 })
 
 export class EditMealComponent {

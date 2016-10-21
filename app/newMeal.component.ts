@@ -3,7 +3,7 @@ import { Meal } from './meal.model';
 
 @Component({
   selector: "new-task",
-  templateUrl: "./templates/newMeal.component.html"
+  templateUrl: "app/templates/newMeal.component.html"
 })
 
 export class NewMealComponent {
