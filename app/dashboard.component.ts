@@ -11,10 +11,9 @@ import { MealsComponent } from './all-meals.component';
   selector: 'my-dashboard',
   template: `
   <div class="container row">
-    <div class="well add-meal col-sm-6">
-      <h3>Add new meal:</h3>
-      <new-meal></new-meal>
-    </div>
+
+      <new-meal class="col-sm-6"></new-meal>
+
     <div class="well top-meals col-sm-4 pull-right">
       <h3>Top Meals:</h3>
       <div *ngFor="let meal of meals">
@@ -38,14 +37,5 @@ export class DashboardComponent implements OnInit {
     this.mealService.getMeals()
       .then(meals => this.meals = meals.slice(1,5));
   }
-
-  gotoDetails(meal: Meal) {
-    this.selectedMeal = meal;
-  }
-
-  // gotoDetail(meal: Meal): void {
-  //   let link = ['/detail', meal.id];
-  //   this.router.navigate(link);
-  // }
 
 }

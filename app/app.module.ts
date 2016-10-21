@@ -7,6 +7,7 @@ import { AppComponent }   from './app.component';
 import { MealDetailComponent } from './meal-detail.component';
 import { DashboardComponent }  from './dashboard.component';
 import { MealsComponent } from './all-meals.component';
+import { NewComponent } from './add-new.component';
 
 import { MealService }  from './meal.service';
 
@@ -38,7 +39,8 @@ import { MealService }  from './meal.service';
     AppComponent,
     DashboardComponent,
     MealDetailComponent,
-    MealsComponent
+    MealsComponent,
+    NewComponent
   ],
   providers: [
     MealService

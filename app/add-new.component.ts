@@ -1,4 +1,3 @@
-import { Component } from '@angular/core';
 import { Component, Output, EventEmitter } from '@angular/core';
 
 import { Meal } from './meal';
@@ -10,7 +9,8 @@ import { MealsComponent } from './all-meals.component';
   selector: 'new-meal',
   template: `
     <div class="container">
-      <div class="well">
+      <div class="well col-sm-6 add-meal">
+        <h3>Add a new meal:</h3>
         <div class="form-group">
           <input #newName class="form-control" placeholder="What did you devour?">
         </div>
@@ -34,6 +34,6 @@ import { MealsComponent } from './all-meals.component';
   `
 })
 
-export class AppComponent {
+export class NewComponent {
   title = "Meal Tracker";
 }

@@ -8,7 +8,7 @@ import { MealService } from './meal.service';
   template: `
     <div class="container">
     <div class="row">
-      <div class="well col-sm-7">
+      <div class="well col-sm-6">
         <h4>Your list of meals:</h4>
         <ul class="meals">
           <li *ngFor="let meal of meals"
@@ -18,8 +18,8 @@ import { MealService } from './meal.service';
           <p>Calories: {{ meal.calories }}</p>
         </ul>
       </div>
-      <div class="details col-sm-5">
-        <meal-detail></meal-detail>
+      <div class="details col-sm-6">
+        <meal-detail [meal]= "selectedMeal"></meal-detail>
       </div>
     </div>
     </div>
@@ -45,5 +45,5 @@ export class MealsComponent implements OnInit {
     this.selectedMeal = meal;
   }
 
-  
+
 }
