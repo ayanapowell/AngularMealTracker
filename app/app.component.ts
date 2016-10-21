@@ -3,11 +3,7 @@ import { Meal } from './meal.model';
 
 @Component({
   selector: 'my-app',
-  template: `
-    <div class="container">
-      <h1>{{ title }}</h1>
-    </div>
-  `
+  templateUrl: './templates/app.component.html'
 })
 
 export class AppComponent {

@@ -6,6 +6,6 @@ import { Meal } from './meal.model';
   templateUrl: './templates.editMeal.component.html'
 })
 
-export class EditMeal {
+export class EditMealComponent {
   
 }
