@@ -30,7 +30,6 @@ import { MealsComponent } from './all-meals.component';
     </div>
   </div>
   `
-
 })
 
 export class MealDetailComponent implements OnInit {

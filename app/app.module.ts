@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule }   from '@angular/router';
+import { HttpModule }    from '@angular/http';
 
 import { AppComponent }   from './app.component';
 import { MealDetailComponent } from './meal-detail.component';
@@ -15,6 +16,7 @@ import { MealService }  from './meal.service';
   imports: [
     BrowserModule,
     FormsModule,
+    HttoModule,
     RouterModule.forRoot([
       {
         path: 'meals',
