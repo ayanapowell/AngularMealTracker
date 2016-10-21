@@ -7,14 +7,21 @@ import { MealService } from './meal.service';
   selector: 'all-meals',
   template: `
     <div class="container">
-      <div class="well">
+    <div class="row">
+      <div class="well col-sm-7">
         <h4>Your list of meals:</h4>
         <ul class="meals">
-          <li *ngFor="let meal of meals">
+          <li *ngFor="let meal of meals"
+            [class.selected]="meal === selectedMeal"
+            (click)="onSelect(meal)">
           <strong>{{ meal.name }}</strong>: <span><em>{{ meal.description }}</em></span>
           <p>Calories: {{ meal.calories }}</p>
         </ul>
       </div>
+      <div class="details col-sm-5">
+        <meal-detail></meal-detail>
+      </div>
+    </div>
     </div>
   `,
   providers: [MealService]
@@ -33,4 +40,10 @@ export class MealsComponent implements OnInit {
   ngOnInit(): void {
     this.getMeals();
   }
+
+  onSelect(meal:Meal): void {
+    this.selectedMeal = meal;
+  }
+
+  
 }

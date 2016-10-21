@@ -7,6 +7,44 @@ a {
   color: black;
 }
 
+h3 {
+  color: #2d5986;
+}
+
+.top-meals, .add-meal{
+  margin: 30px 0 20px 0;
+}
+
+.top-meals h3,
+.add-meal h3  {
+  border-bottom: 1px solid #8cb3d9;
+  padding-bottom: 5px;
+  width: 90%;
+  margin-left: 2%;
+}
+
+.top-meals .hero {
+  margin-left: 2%;
+}
+
+.hero span {
+  font-size: 12px;
+  font-style: italic;
+  margin-left: 2px;
+}
+
+.see-all {
+  color: #2d5986;
+  padding-top: 50px;
+  margin-left: 2%;
+  font-style: italic;
+}
+
+.see-all:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .header {
   background: url('../../resources/img/sandwich.jpeg') center center no-repeat;
   background-size: cover;

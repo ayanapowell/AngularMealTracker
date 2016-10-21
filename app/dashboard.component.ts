@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 import { Meal } from './meal';
 import { MealService } from './meal.service';
@@ -10,16 +10,19 @@ import { MealsComponent } from './all-meals.component';
   moduleId: module.id,
   selector: 'my-dashboard',
   template: `
-  <div class="container">
-    <div class="well top-meals">
-      <h3>Top Meals</h3>
-      <div class="grid grid-pad">
-        <div *ngFor="let meal of meals" (click)="gotoDetails(meal)" class="col-1-4">
-          <div class="module hero">
-            <h4>{{meal.name}}</h4>
-          </div>
+  <div class="container row">
+    <div class="well add-meal col-sm-6">
+      <h3>Add new meal:</h3>
+      <new-meal></new-meal>
+    </div>
+    <div class="well top-meals col-sm-4 pull-right">
+      <h3>Top Meals:</h3>
+      <div *ngFor="let meal of meals">
+        <div class="module hero">
+          <h4>{{meal.name}}<span>  {{ meal.calories }} calories</span></h4>
         </div>
-      </div>
+      </div><br><br>
+      <a routerLink="/meals" class="see-all">See all your meals</a>
     </div>
   </div>
   `
@@ -27,6 +30,7 @@ import { MealsComponent } from './all-meals.component';
 
 export class DashboardComponent implements OnInit {
   meals: Meal[] = [];
+  selectedMeal: Meal;
 
   constructor(private mealService: MealService) { }
 
@@ -35,8 +39,13 @@ export class DashboardComponent implements OnInit {
       .then(meals => this.meals = meals.slice(1,5));
   }
 
-  gotoDetails() {
-
+  gotoDetails(meal: Meal) {
+    this.selectedMeal = meal;
   }
+
+  // gotoDetail(meal: Meal): void {
+  //   let link = ['/detail', meal.id];
+  //   this.router.navigate(link);
+  // }
 
 }
