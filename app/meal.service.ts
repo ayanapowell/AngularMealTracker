@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Meals } from './meal';
-import { MEALS } from './mock-meal';
+import { Meal } from './meal';
+import { MEALS } from './mock-meals';
 
 @Injectable()
 

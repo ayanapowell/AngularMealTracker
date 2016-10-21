@@ -11,5 +11,13 @@ import { MealService } from './meal.service';
 })
 
 export class DashboardComponent implements OnInit {
+  meals: Meal[] = [];
+
+  constructor(private mealService: MealService) { }
+
+  ngOnInit(): void {
+    this.mealService.getMeals()
+      .then(meals => this.meals = meals.slice(1,5));
+  }
 
 }
