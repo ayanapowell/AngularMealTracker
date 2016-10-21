@@ -1,6 +1,6 @@
 export class Meal {
+  id: number;
   name: string;
   description: string;
   calories: number;
-  id: number;
 }

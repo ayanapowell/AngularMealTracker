@@ -10,6 +10,6 @@ import { MealService } from './meal.service';
   templateUrl: 'templates/dashboard.component.html',
 })
 
-export class DashboardComponent implements {
+export class DashboardComponent implements OnInit {
 
 }
