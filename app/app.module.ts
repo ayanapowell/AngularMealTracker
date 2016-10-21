@@ -5,7 +5,6 @@ import { RouterModule }   from '@angular/router';
 
 import { AppComponent }   from './app.component';
 import { MealDetailComponent } from './meal-detail.component';
-import { MealsComponent } from './meals.component';
 import { DashboardComponent }  from './dashboard.component';
 
 import { MealService }  from './meal.service';
@@ -15,10 +14,6 @@ import { MealService }  from './meal.service';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      {
-        path: 'meals',
-        component: MealsComponent
-      },
       {
         path: 'dashboard',
         component: DashboardComponent
@@ -37,8 +32,7 @@ import { MealService }  from './meal.service';
   declarations: [
     AppComponent,
     DashboardComponent,
-    MealDetailComponent,
-    MealsComponent,
+    MealDetailComponent
   ],
   providers: [
     MealService

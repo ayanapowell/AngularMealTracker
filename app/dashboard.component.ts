@@ -7,7 +7,18 @@ import { MealService } from './meal.service';
 @Component({
   moduleId: module.id,
   selector: 'my-dashboard',
-  templateUrl: 'templates/dashboard.component.html',
+  template: `
+  <h3>Top Meals</h3>
+  <div class="container">
+    <div class="grid grid-pad">
+      <div *ngFor="let meal of meals" (click)="gotoDetails(meal)" class="col-1-4">
+        <div class="module hero">
+          <h4>{{meal.name}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  `
 })
 
 export class DashboardComponent implements OnInit {
@@ -18,6 +29,10 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.mealService.getMeals()
       .then(meals => this.meals = meals.slice(1,5));
+  }
+
+  gotoDetails() {
+
   }
 
 }
