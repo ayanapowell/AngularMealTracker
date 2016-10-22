@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Meal List</title>
-</head>
-<body>
-  
-</body>
-</html>
+<div *ngFor="let currentMeal of childMealList">
+  <ul>
+    <meal-display [meal]="currentMeal"></meal-display>
+  </ul>
+</div>

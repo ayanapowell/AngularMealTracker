@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Meal Tracker</title>
-</head>
-<body>
-  <nav>
-  </nav>
-  <div class="container header">
+<div class="container">
+  <div class="header">
     <h1>{{ title }}</h1>
   </div>
-</body>
-</html>
+
+<!-- list of user meals -->
+  <div class="mealList well"> 
+    <h2>Your meals:</h2>
+    <meal-list
+      [childMealList] = "masterMealList"
+      (clickSender) = "showDetails($event)"
+    >
+    </meal-list>
+  </div>
+</div>

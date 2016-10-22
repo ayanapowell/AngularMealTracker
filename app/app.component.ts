@@ -3,7 +3,27 @@ import { Meal } from './meal.model';
 
 @Component({
   selector: 'my-app',
-  templateUrl: 'app/templates/app.component.html'
+  template: `
+    <div class="container">
+      <div class="header">
+        <h1>{{ title }}</h1>
+      </div>
+      <div class="mealList well"> 
+        <h2>Your meals:</h2>
+        <meal-list
+          [childMealList] = "masterMealList"
+          (clickSender) = "showDetails($event)"
+        >
+        </meal-list>
+      </div>
+      <div class="newMeal">
+        <new-meal
+          (newMealSender)="addMeal($event)"
+        ></new-meal>
+      </div>
+    </div>
+  `
+  //templateUrl: 'app/templates/app.component.html'
 })
 
 export class AppComponent {
@@ -19,5 +39,15 @@ export class AppComponent {
     new Meal("Nothing", "01/08/16", "I got lost in the woods for 2 days", 0),
     new Meal("Pasta Bolognese", "01/10/16", "So damn good after eating nothing for 2 days", 700),
     new Meal("Insects", "01/11/16", "I got lost in the woods again...", 20)
-  ]
+  ];
+
+  selectedMeal: Meal = null;
+  
+  showDetails(clickedMeal: Meal) {
+    this.selectedMeal = clickedMeal;
+  }
+
+  addMeal(newMealFromChild: Meal) {
+    this.masterMealList.push(newMealFromChild);
+  }
 }
