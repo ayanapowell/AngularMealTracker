@@ -8,18 +8,26 @@ import { Meal } from './meal.model';
       <div class="header">
         <h1>{{ title }}</h1>
       </div>
-      <div class="mealList well"> 
-        <h2>Your meals:</h2>
-        <meal-list
-          [childMealList] = "masterMealList"
-          (clickSender) = "showDetails($event)"
-        >
-        </meal-list>
-      </div>
-      <div class="newMeal">
-        <new-meal
-          (newMealSender)="addMeal($event)"
-        ></new-meal>
+      <div class="row">
+        <div class="mealList col-sm-5"> 
+          <h2>Your Meals:</h2>
+          <meal-list [childMealList] = "masterMealList" (clickSender) = "showDetails($event)">
+          </meal-list>
+        </div>
+
+        <div class="newMeal">
+          <h2>Add a meal</h2>
+          <new-meal
+            (newMealSender)="addMeal($event)"
+          ></new-meal>
+        </div>
+        <div class="editMeal">
+          <edit-meal
+            [childSelectedMeal]="selectedMeal"
+            (doneClickedSender)="finishedEditing()"
+          ></edit-meal>
+
+        </div>
       </div>
     </div>
   `
@@ -42,7 +50,7 @@ export class AppComponent {
   ];
 
   selectedMeal: Meal = null;
-  
+
   showDetails(clickedMeal: Meal) {
     this.selectedMeal = clickedMeal;
   }

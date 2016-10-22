@@ -22,6 +22,7 @@ import { EditInputPipe } from './editInput.pipe';
     EditMealComponent,
     NewMealComponent,
     MealListComponent,
+    MealComponent,
     EditInputPipe  
   ],  
   bootstrap:    [ AppComponent ]

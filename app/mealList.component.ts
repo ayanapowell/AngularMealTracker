@@ -4,11 +4,13 @@ import { Meal } from './meal.model';
 @Component({
   selector: "meal-list",
   template: `
-    <div *ngFor="let currentMeal of childMealList">
-      <ul>
+    <div class="mealList">
+      <div *ngFor="let currentMeal of childMealList" class="well">
         <meal-display [meal]="currentMeal"></meal-display>
-      </ul>
+        <hr>
+      </div>
     </div>
+   
   `
  // templateUrl: "app/templates/mealList.component.html"
 })
