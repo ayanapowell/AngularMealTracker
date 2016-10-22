@@ -37,3 +37,9 @@ hr {
   font-size: 0.6em;
   font-style: italic;
 }
+
+.mealList,
+.mealList h2 {
+  padding-left: 40px;
+}
+

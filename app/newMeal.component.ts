@@ -4,6 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: "new-meal",
   template: `
+  <div class="well">
     <div class="form-group">
       <input #newDate class="form-control" placeholder="date">
     </div>
@@ -22,7 +23,8 @@ import { Meal } from './meal.model';
       newName.value='';
       newDetails.value='';
       newCalories.value='';
-    "
+    " class="btn btn-default">submit</button>
+  </div>
   `
   
   //templateUrl: "app/templates/newMeal.component.html"

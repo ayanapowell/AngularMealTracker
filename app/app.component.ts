@@ -9,14 +9,14 @@ import { Meal } from './meal.model';
         <h1>{{ title }}</h1>
       </div>
       <div class="row">
-        <div class="mealList col-sm-5"> 
+        <div class="mealList col-sm-6"> 
           <h2>Your Meals:</h2>
           <meal-list [childMealList] = "masterMealList" (clickSender) = "showDetails($event)">
           </meal-list>
         </div>
 
-        <div class="newMeal">
-          <h2>Add a meal</h2>
+        <div class="newMeal col-sm-4 col-sm-offset-1">
+          <h2>Add a meal:</h2>
           <new-meal
             (newMealSender)="addMeal($event)"
           ></new-meal>
@@ -26,7 +26,6 @@ import { Meal } from './meal.model';
             [childSelectedMeal]="selectedMeal"
             (doneClickedSender)="finishedEditing()"
           ></edit-meal>
-
         </div>
       </div>
     </div>
