@@ -15,7 +15,7 @@ import { Meal } from './meal.model';
       <textarea #newDetails class="form-control" placeholder="details"></textarea>
     </div>
     <div class="form-group">
-      <input #newCalories class="form-control" placeholder="calories" type="number">
+      <input #newCalories class="form-control" placeholder="calories">
     </div>
     <button (click)="
       addClicked(newDate.value, newName.value, newDetails.value, newCalories.value);
@@ -33,8 +33,8 @@ import { Meal } from './meal.model';
 export class NewMealComponent {
   @Output() newMealSender = new EventEmitter();
 
-  addClicked(date:string, name:string, details: string, calories:string) {
-    var newMealToAdd: Meal = new Meal(date,name,details,calories);
+  addClicked(date: string, name: string, details: string, calories: number) {
+    var newMealToAdd: Meal = new Meal(date, name, details, calories);
     this.newMealSender.emit(newMealToAdd);
   }
 }

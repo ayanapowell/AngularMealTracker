@@ -43,3 +43,8 @@ hr {
   padding-left: 40px;
 }
 
+.mealList .btn {
+  border: none;
+  background: transparent;
+  color: #2d5986;
+}

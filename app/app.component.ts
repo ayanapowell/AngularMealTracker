@@ -11,15 +11,31 @@ import { Meal } from './meal.model';
       <div class="row">
         <div class="mealList col-sm-6"> 
           <h2>Your Meals:</h2>
-          <meal-list [childMealList] = "masterMealList" (clickSender) = "showDetails($event)">
+
+          <meal-list 
+            [childMealList]="masterMealList" 
+            (clickSender)="showDetails($event)">
           </meal-list>
+
         </div>
 
         <div class="newMeal col-sm-4 col-sm-offset-1">
-          <h2>Add a meal:</h2>
-          <new-meal
-            (newMealSender)="addMeal($event)"
-          ></new-meal>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>Add a meal:</h2>
+              <new-meal
+                (newMealSender)="addMeal($event)"
+              ></new-meal>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 well">
+                <edit-meal
+                  [childSelectedMeal]="selectedMeal"
+                  (doneClickedSender)="finishedEditing()"
+                ></edit-meal>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="editMeal">
           <edit-meal
@@ -56,5 +72,9 @@ export class AppComponent {
 
   addMeal(newMealFromChild: Meal) {
     this.masterMealList.push(newMealFromChild);
+  }
+
+  finishedEditing() {
+    this.selectedMeal = null;
   }
 }
