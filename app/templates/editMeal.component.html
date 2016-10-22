@@ -1,9 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Edit Meal</title>
-</head>
-<body>
-  
-</body>
-</html>
+<div *ngIf="childSelectedMeal">
+  <h2 class="edit">Edit:</h2>
+  <div class="well">
+    <div class="form-group">
+      <input [(ngModel)]="childSelectedMeal.name" class="form-control">
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="childSelectedMeal.date" class="form-control">
+    </div>
+    <div class="form-group">
+      <textarea [(ngModel)]="childSelectedMeal.details" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="childSelectedMeal.calories" class="form-control">
+    </div>
+    <button (click)="doneClicked()" class="btn btn-default">Update</button>
+  </div>
+</div>

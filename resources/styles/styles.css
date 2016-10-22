@@ -28,6 +28,10 @@ p {
   text-shadow: 1px 1px #f2f2f2;
 }
 
+#content {
+  margin-top: 50px;
+}
+
 .calories {
   font-size: 0.6em;
   font-style: italic;

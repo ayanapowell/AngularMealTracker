@@ -1,5 +1,12 @@
-<div *ngFor="let currentMeal of childMealList">
-  <ul>
+<div class="mealList">
+  <select (change)="onChange($event.target.value)" class="filter form-control">
+    <option value="default" selected="selected">Filter by calories</option>
+    <option value="all">Show all</option>
+    <option value="under">Under 500 cal</option>
+    <option value="over">Over 500 cal</option>
+  </select>
+  <div *ngFor="let currentMeal of childMealList | calories:selectedFilter" class="well">
     <meal-display [meal]="currentMeal"></meal-display>
-  </ul>
+    <button (click)="editButtonClicked(currentMeal)" class="btn btn-default">(Edit)</button>
+  </div>
 </div>
