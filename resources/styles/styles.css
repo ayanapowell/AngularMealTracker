@@ -16,13 +16,8 @@ p {
   font-style: italic;
 }
 
-hr {
-  color: black;
-}
-
 .header {
-  background: url(../../resources/img/tomatoes.jpeg);
-  background-repeat: no-repeat;
+  background: url('../../resources/img/sandwich.jpeg') center center no-repeat;
   background-size: cover;
   height: 400px;
 }
