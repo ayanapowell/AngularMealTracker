@@ -1,6 +1,6 @@
-# _{Application Name}_
+# _{Meal Tracker}_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _This application is a food/calorie tracker. A user may enter a meal they have eaten, a description and the number of calories it contained._
 
 #### By _**Ayana Powell**_
 
