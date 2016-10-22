@@ -1,37 +1,45 @@
 # _{Meal Tracker}_
 
-#### _This application is a food/calorie tracker. A user may enter a meal they have eaten, a description and the number of calories it contained._
+#### _This application is a food/calorie tracker, October 21st, 2016_
 
 #### By _**Ayana Powell**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_A user may post or edit a meal they have eaten, a description and the number of calories it contained. User may view their meal history as well as filter them by calorie amount._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _Clone this repository at (https://github.com/ayanapowell/tracker.git)_
+* _In the top directory of the project folder install Node Packages from terminal command line:_
+  **_$ npm install_
+* _In the top directory of the project folder install Bower Dependencies from terminal command line:_
+  **_ $ bower install_
+* _Once installation is complete run the following command to run program locally in your server:_
+  **_ $ gulp build_
+  **_ $ gulp serve_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_No known bugs at this time_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_For questions contact me at: ayanapowell1@gmail.com_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_HTML_
+_Sass_
+_Bootstrap_
+_Typescript with AngularJS_
+_Node.js with Node Package Manager_
+_Bower_
+_Gulp_
+_Git_
+
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
-
+*This webpage is licensed under the MIT license.*
 Copyright (c) 2016 **_Ayana Powell_**
