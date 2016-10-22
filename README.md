@@ -29,14 +29,14 @@ _For questions contact me at: ayanapowell1@gmail.com_
 
 ## Technologies Used
 
-*_HTML_
-*_Sass_
-*_Bootstrap_
-*_Typescript with AngularJS_
-*_Node.js with Node Package Manager_
-*_Bower_
-*_Gulp_
-*_Git_
+* _HTML_
+* _Sass_
+* _Bootstrap_
+* _Typescript with AngularJS_
+* _Node.js with Node Package Manager_
+* _Bower_
+* _Gulp_
+* _Git_
 
 
 ### License
