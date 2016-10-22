@@ -1,8 +1,8 @@
-# _{Meal Tracker}_
+# _Meal Tracker_
 
 #### _This application is a food/calorie tracker, October 21st, 2016_
 
-#### By _**Ayana Powell**_
+#### By: _**Ayana Powell**_
 
 ## Description
 
@@ -12,12 +12,12 @@ _A user may post or edit a meal they have eaten, a description and the number of
 
 * _Clone this repository at (https://github.com/ayanapowell/tracker.git)_
 * _In the top directory of the project folder install Node Packages from terminal command line:_
-  **_$ npm install_
+  * $ npm install
 * _In the top directory of the project folder install Bower Dependencies from terminal command line:_
-  **_ $ bower install_
+  * $ bower install
 * _Once installation is complete run the following command to run program locally in your server:_
-  **_ $ gulp build_
-  **_ $ gulp serve_
+  * $ gulp build
+  * $ gulp serve
 
 ## Known Bugs
 
@@ -29,14 +29,14 @@ _For questions contact me at: ayanapowell1@gmail.com_
 
 ## Technologies Used
 
-_HTML_
-_Sass_
-_Bootstrap_
-_Typescript with AngularJS_
-_Node.js with Node Package Manager_
-_Bower_
-_Gulp_
-_Git_
+*_HTML_
+*_Sass_
+*_Bootstrap_
+*_Typescript with AngularJS_
+*_Node.js with Node Package Manager_
+*_Bower_
+*_Gulp_
+*_Git_
 
 
 ### License
