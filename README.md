@@ -21,7 +21,7 @@ _A user may post or edit a meal they have eaten, a description and the number of
 
 ## Known Bugs
 
-_No known bugs at this time_
+_No known at this time_
 
 ## Support and contact details
 
